@@ -1,1 +1,63 @@
-<h1>whats poppind</h1>
+<div class="header">
+  <div class="container justify-content-center text-center">
+      <div class="icon d-block my-4">
+          <%=image_tag("home/icon.png",class:"image")%>
+      <p class="icon-title">SAY SOMETHONG</p>
+      </div>
+  </div>
+</div>
+<div class="chat-window">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-9">
+
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+              <%@messages.each do|message|%>
+            <ol class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">Subheading</div>
+                  <%=message.body%>
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+              </li>
+            </ol>
+            <%end%>
+          </div>
+
+          <form>
+            <div class="card-footer">
+              <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="enter message" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body text-center">
+            <ul class="list-group">
+            <li class="list-group-item active" aria-current="true">An active item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
