@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: poppins;
+
 }
 .image{
   border-radius: 50px;
@@ -15,7 +16,6 @@
  font-weight: 900;
 }
 .card{
-  height: 500px;
   padding: 2px;
   border-radius: 10px;
   border: 1px  solid brown;

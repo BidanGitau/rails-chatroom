@@ -1,0 +1,6 @@
+<% flash.each do |message_type,message_content|%>
+<div class="alert alert-info alert-dismissible fade show">
+    <strong>Info!</strong> <%=message_content%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+<%end%>
