@@ -1,52 +1,52 @@
 <div class="header">
-  <div class="container justify-content-center text-center">
-      <div class="icon d-block my-4">
-          <%=image_tag("home/icon.png",class:"image")%>
-      <p class="icon-title">SAY SOMETHONG</p>
-      </div>
-  </div>
+    <div class="container justify-content-center text-center">
+        <div class="icon d-block my-4">
+            <%=image_tag("home/icon.png",class:"image")%>
+                <p class="icon-title">SAY SOMETHONG</p>
+        </div>
+    </div>
 </div>
 <div class="chat-window">
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-md-9">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-md-9">
 
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body" id="message-container">
-             <%= render @messages %>
-          </div>
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body" id="message-container">
+                        <%= render @messages %>
+                    </div>
 
-          <%=form_with scope: :message,url: message_path remote: true,class:"form",data: {turbo: false}  do |f|%>
-            <div class="card-footer">
-              <div class="input-group mb-3">
-                <%= f.text_field :body ,class:"form-control", placeholder:"enter message"%>
-                <%=f.button "Submit", class:"btn btn-outline-success"%>
+                    <%=form_with scope: :message,url: message_path ,remote: false,class:"form",data: {turbo: false}  do |f|%>
+                        <div class="card-footer">
+                            <div class="input-group mb-3">
+                                <%= f.text_field :body ,class:"form-control", placeholder:"enter message"%>
+                                    <%=f.button "Submit", class:"btn btn-outline-success"%>
+                            </div>
+                        </div>
+                        <%end%>
+
+                </div>
             </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <div class="btn-group-vertical card__menu rounded">
+                            <a href="#" class="btn card__menu-btn">Home</a>
+                            <a href="#" class="btn card__menu-btn">Messages</a>
+                            <a href="#" class="btn card__menu-btn">Friends</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          <%end%>
 
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-         <div class="btn-group-vertical card__menu rounded">
-           <a href="#" class="btn card__menu-btn">Home</a>
-           <a href="#" class="btn card__menu-btn">Messages</a>
-           <a href="#" class="btn card__menu-btn">Friends</a>
-         </div>
-       </div>
-     </div>
-      </div>
 
     </div>
-
-  </div>
 
 </div>
